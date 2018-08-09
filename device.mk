@@ -260,7 +260,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610 \
-    ro.sf.lcd_density=440 
+    ro.sf.lcd_density=440
+
+# Device-specific settings
+PRODUCT_PACKAGES += \
+    XiaomiParts
 
 # DRM
 #PRODUCT_PACKAGES += \
@@ -542,10 +546,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
-# XiaomiParts
-PRODUCT_PACKAGES += \
-    XiaomiParts
 
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/markw/markw-vendor.mk)
