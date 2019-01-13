@@ -251,3 +251,5 @@ persist.vendor.qti.inputopts.movetouchslop=0.6
 # Virtual Display
 debug.sdm.support_writeback=0
 
+# Dirac
+persist.audio.dirac.speaker=true
