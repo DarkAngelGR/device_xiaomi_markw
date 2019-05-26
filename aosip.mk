@@ -19,8 +19,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common POSP stuff
-$(call inherit-product, vendor/potato/config/common_full_phone.mk)
+# Inherit some common AOSiP stuff
+$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
 # Inherit from markw device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -31,19 +31,13 @@ TARGET_BOOT_ANIMATION_RES := 1080
 
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := Xiaomi
-PRODUCT_NAME := potato_markw
+PRODUCT_NAME := aosip_markw
 BOARD_VENDOR := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_DEVICE := markw
 PRODUCT_MODEL := Redmi 4 Prime
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
-
-# Higher fling velocities
-# for smoother scrolling and better responsiveness
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.min.fling_velocity=160 \
-ro.max.fling_velocity=20000
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="markw-user 6.0.1 MMB29M V10.2.1.0.MBEMIXM release-keys" \
